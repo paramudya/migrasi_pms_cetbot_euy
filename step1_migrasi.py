@@ -291,7 +291,7 @@ class step1: #jadinya semua digabung disinmi aja, jadi ga cmn step 1
                     temperature=0,
                     stream=True,
                     messages=[
-                        {"role": "system", "content": "You are an executable {self.engine} query generator."},
+                        {"role": "system", "content": f"You are an executable {self.engine} query generator."},
                         {"role": "user", "content": self.prefix_query_generator+self.system_message['query_'+self.what_table]+self.few_shot['query_'+self.what_table]+r'\nQ: {}\nA:'.format(question)}
                     ]
                 )
